@@ -94,6 +94,17 @@ contract AutoWithdraw is ERC721, AccessControl {
         financeWallet.transfer(address(this).balance);
     }
 
+    /**
+     * The admin role can add additional wallets to the FINANCE_ROLE. 
+     * It doesn't make a ton of sense in this sample because all funds are auto withdrawn upon minting.
+     * But if that were not the case it might make sense to have more than one wallet that can call
+     * the withdraw function. Once again, in this case it doesn't make sense because the withdraw 
+     * simply transfers to the financeWallet. 
+     */
+    function grantFinanceRole(address _wallet) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        _grantRole(FINANCE_ROLE, _wallet);
+    }
+
     // VIEW
 
     function tokenURI(uint256 _tokenId) public view override returns (string memory) {
