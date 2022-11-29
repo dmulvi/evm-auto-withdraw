@@ -1,4 +1,4 @@
-**Ethereum Merkle Tree Based Whitelist Sample**
+**Ethereum ERC-721 with Auto Withdrawal**
 
 This is an example project to help explain merkle tree based whitelists. It is only a sample. You will very likely need to modify it to fit your needs. No warranty or guarantee of any sort is included with this ***SAMPLE*** software package.
 
@@ -6,11 +6,11 @@ This is an example project to help explain merkle tree based whitelists. It is o
 
 Clone the repository
 
-`git clone git@github.com:Crossmint/eth-merkle-example.git`
+`git clone git@github.com:dmulvi/evm-auto-withdraw.git`
 
 Install the dependencies
 
-`npm install`
+`yarn install`
 
 
 Copy the .env file template
